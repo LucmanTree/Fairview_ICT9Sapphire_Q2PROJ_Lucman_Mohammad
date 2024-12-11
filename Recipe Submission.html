@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Submit a Recipe</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: lightyellow;
+            font-family: Arial, sans-serif;
+        }
+        .form-header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: palevioletred;
+            color: white;
+        }
+        .form-header h1 {
+            font-size: 2.5rem;
+        }
+        .form-container {
+            background-color: goldenrod;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+     <nav class="navbar navbar-expand-md bg-success navbar-success fixed-top">
+
+    <div class="container-fluid">
+        <h5>Lutong Moro</h5>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                       <a class="nav-link" href="Project 2ndpage.html">Meal Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Recipe Submission.html">Submit Recipes</a>
+                </li>
+                <form class="d-flex">
+                <input class="form-control" type="text" placeholder="search...">
+                <button class="btn btn-danger" type="button">Search</button>
+            </form>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="form-header" style="margin-top: 50px;">
+        <h1>Submit Your Recipe</h1>
+        <p>The best recipes will be featured on our website!</p>
+    </div>
+
+  
+    <div class="container my-5">
+        <div class="form-container mx-auto col-lg-8">
+            <form action="/submit-recipe" method="post" enctype="multipart/form-data">
+               
+                <div class="mb-3">
+                    <label for="recipeName" class="form-label">Recipe Name</label>
+                    <input type="text" class="form-control" id="recipeName" name="recipeName" placeholder="Enter the recipe name" required>
+                </div>
+
+          
+                <div class="mb-3">
+                    <label for="recipeDescription" class="form-label">Recipe Description</label>
+                    <textarea class="form-control" id="recipeDescription" name="recipeDescription" rows="3" placeholder="Briefly describe your recipe" required></textarea>
+                </div>
+
+               
+                <div class="mb-3">
+                    <label for="ingredients" class="form-label">Ingredients</label>
+                    <textarea class="form-control" id="ingredients" name="ingredients" rows="5" placeholder="List the ingredients (one per line)" required></textarea>
+                </div>
+
+              
+                <div class="mb-3">
+                    <label for="steps" class="form-label">Steps</label>
+                    <textarea class="form-control" id="steps" name="steps" rows="7" placeholder="List the steps to prepare the dish (one per line)" required></textarea>
+                </div>
+
+        
+                <div class="mb-3">
+                    <label for="recipeImage" class="form-label">Upload an Image</label>
+                    <input type="file" class="form-control" id="recipeImage" name="recipeImage" accept="image/*" required>
+                </div>
+
+                
+                <div class="text-center">
+                    <button type="submit" href="index.html" class="btn btn-primary">Submit Recipe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
